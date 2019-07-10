@@ -1,0 +1,188 @@
+<!-- 
+User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation).
+User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5.
+User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section.
+User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "Javascript and Java" should have a corresponding id="Javascript_and_Java").
+User Story #5: The .main-section elements should contain at least 10 p elements total (not each).
+User Story #6: The .main-section elements should contain at least 5 code elements total (not each).
+User Story #7: The .main-section elements should contain at least 5 li items total (not each).
+User Story #8: I can see a nav element with a corresponding id="navbar".
+User Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation.
+User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section.
+User Story #11: The header element in the navbar must come before any link (a) elements in the navbar.
+User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world").
+User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header.
+User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.
+User Story #15: My Technical Documentation page should use at least one media query.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="TechnicalDocumentPage.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <title>Technical Document Title</title>
+</head>
+<body>
+
+       <nav id="navbar">
+        <h1>Header for Nav</h1>
+        <ul>
+            <a href="#Topic1"><li>Topic1</li></a>
+            <a href="#Topic2"><li>Topic2</li></a>
+            <a href="#Topic3"><li>Topic3</li></a>
+            <a href="#Topic4"><li>Topic4</li></a>
+            <a href="#Topic5"><li>Topic5</li></a>
+        </ul>
+    </nav>
+<!-- FIRST TOPIC -->
+    <main id="main-doc">
+        <section class="main-section">
+            <h2 id="Topic1">Topic 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio nulla, vestibulum vitae neque eget, tempor iaculis lacus. Mauris ac bibendum neque, ut dictum elit. Vestibulum porttitor mauris in ligula rutrum ullamcorper. Vivamus vestibulum eros non fringilla interdum.</p> 
+            
+            <p><code>In consequat enim vel cursus finibus.</code></p>
+
+            <p> Nunc mattis dolor nunc, vel pretium sem pellentesque in. Praesent volutpat dui sed odio faucibus, sit amet mollis nisl mollis. Proin placerat, orci nec mattis facilisis, augue nibh faucibus dolor, in imperdiet neque sapien lacinia nulla. In pretium lorem quam, sed sodales turpis posuere sed. Cras egestas mattis nisl ut gravida.</p>
+
+            <p>Duis convallis dapibus scelerisque. Donec scelerisque congue urna vel ullamcorper. Quisque vehicula elementum tortor et lacinia. Etiam imperdiet lacus nec tincidunt tempor.</p>
+
+            <p><code>Vivamus iaculis sem ut dui finibus, nec finibus libero euismod.</code></p>
+            
+            <p>Quisque bibendum, tortor sit amet tincidunt cursus, tortor neque euismod leo, eu tristique nisi dolor sed mauris. Aliquam mattis ipsum quis dui posuere, sed varius magna convallis. Nullam sagittis auctor ex quis pretium. Proin vitae arcu diam. Pellentesque finibus ante non orci molestie, a elementum libero viverra. Cras a mauris eget leo accumsan pretium. Integer malesuada tincidunt arcu et viverra. Ut tincidunt, sapien quis consectetur fringilla, leo justo euismod diam, eu varius ex tortor eu mauris. Etiam eu felis vestibulum, blandit ligula eget, semper diam.</p>
+        
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie fringilla euismod. Nulla sollicitudin sagittis est suscipit fringilla.</li>
+                <ul>
+                    <li><p><code>Nulla sollicitudin sagittis est suscipit fringilla.</code></p>
+                    </li>
+                </ul>
+                <li> Integer tincidunt, ante tempus aliquam dignissim, orci urna finibus neque, ut bibendum est augue vehicula dolor. Proin.</li>
+            </ul>
+            <hr>
+        </section>
+<!-- SECOND TOPIC -->
+        <section class="main-section">
+            <h2 id="Topic2">Topic 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio nulla, vestibulum vitae neque eget, tempor iaculis lacus. Mauris ac bibendum neque, ut dictum elit. Vestibulum porttitor mauris in ligula rutrum ullamcorper. Vivamus vestibulum eros non fringilla interdum.</p> 
+            
+            <p><code>In consequat enim vel cursus finibus.</code></p>
+
+            <p> Nunc mattis dolor nunc, vel pretium sem pellentesque in. Praesent volutpat dui sed odio faucibus, sit amet mollis nisl mollis. Proin placerat, orci nec mattis facilisis, augue nibh faucibus dolor, in imperdiet neque sapien lacinia nulla. In pretium lorem quam, sed sodales turpis posuere sed. Cras egestas mattis nisl ut gravida.</p>
+
+            <p>Duis convallis dapibus scelerisque. Donec scelerisque congue urna vel ullamcorper. Quisque vehicula elementum tortor et lacinia. Etiam imperdiet lacus nec tincidunt tempor.</p>
+             
+            <p><code>Vivamus iaculis sem ut dui finibus, nec finibus libero euismod.</code></p>
+            
+            <p>Quisque bibendum, tortor sit amet tincidunt cursus, tortor neque euismod leo, eu tristique nisi dolor sed mauris. Aliquam mattis ipsum quis dui posuere, sed varius magna convallis. Nullam sagittis auctor ex quis pretium. Proin vitae arcu diam. Pellentesque finibus ante non orci molestie, a elementum libero viverra. Cras a mauris eget leo accumsan pretium. Integer malesuada tincidunt arcu et viverra. Ut tincidunt, sapien quis consectetur fringilla, leo justo euismod diam, eu varius ex tortor eu mauris. Etiam eu felis vestibulum, blandit ligula eget, semper diam.</p>
+        
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie fringilla euismod. Nulla sollicitudin sagittis est suscipit fringilla.</li>
+                <ul>
+                    <li><p><code>Nulla sollicitudin sagittis est suscipit fringilla.</code></p>
+                    </li>
+                </ul>
+                <li> Integer tincidunt, ante tempus aliquam dignissim, orci urna finibus neque, ut bibendum est augue vehicula dolor. Proin.</li>
+            </ul>
+            <hr>
+        </section>
+<!-- THIRD TOPIC -->
+        <section class="main-section">
+            <h2 id="Topic3">Topic 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio nulla, vestibulum vitae neque eget, tempor iaculis lacus. Mauris ac bibendum neque, ut dictum elit. Vestibulum porttitor mauris in ligula rutrum ullamcorper. Vivamus vestibulum eros non fringilla interdum.</p> 
+            
+            <p><code>In consequat enim vel cursus finibus.</code></p>
+
+            <p> Nunc mattis dolor nunc, vel pretium sem pellentesque in. Praesent volutpat dui sed odio faucibus, sit amet mollis nisl mollis. Proin placerat, orci nec mattis facilisis, augue nibh faucibus dolor, in imperdiet neque sapien lacinia nulla. In pretium lorem quam, sed sodales turpis posuere sed. Cras egestas mattis nisl ut gravida.</p>
+
+            <p>Duis convallis dapibus scelerisque. Donec scelerisque congue urna vel ullamcorper. Quisque vehicula elementum tortor et lacinia. Etiam imperdiet lacus nec tincidunt tempor.</p>
+            
+            <p><code>Vivamus iaculis sem ut dui finibus, nec finibus libero euismod.</code></p>
+            
+            <p>Quisque bibendum, tortor sit amet tincidunt cursus, tortor neque euismod leo, eu tristique nisi dolor sed mauris. Aliquam mattis ipsum quis dui posuere, sed varius magna convallis. Nullam sagittis auctor ex quis pretium. Proin vitae arcu diam. Pellentesque finibus ante non orci molestie, a elementum libero viverra. Cras a mauris eget leo accumsan pretium. Integer malesuada tincidunt arcu et viverra. Ut tincidunt, sapien quis consectetur fringilla, leo justo euismod diam, eu varius ex tortor eu mauris. Etiam eu felis vestibulum, blandit ligula eget, semper diam.</p>
+        
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie fringilla euismod. Nulla sollicitudin sagittis est suscipit fringilla.</li>
+                <ul>
+                    <li><p><code>Nulla sollicitudin sagittis est suscipit fringilla.</code></p>
+                    </li>
+                </ul>
+                <li> Integer tincidunt, ante tempus aliquam dignissim, orci urna finibus neque, ut bibendum est augue vehicula dolor. Proin.</li>
+            </ul>
+            <hr>
+        </section>
+<!-- FOURTH TOPIC -->
+        <section class="main-section">
+            <h2 id="Topic4">Topic 4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio nulla, vestibulum vitae neque eget, tempor iaculis lacus. Mauris ac bibendum neque, ut dictum elit. Vestibulum porttitor mauris in ligula rutrum ullamcorper. Vivamus vestibulum eros non fringilla interdum.</p> 
+            
+            <p><code>In consequat enim vel cursus finibus.</code></p>
+
+            <p> Nunc mattis dolor nunc, vel pretium sem pellentesque in. Praesent volutpat dui sed odio faucibus, sit amet mollis nisl mollis. Proin placerat, orci nec mattis facilisis, augue nibh faucibus dolor, in imperdiet neque sapien lacinia nulla. In pretium lorem quam, sed sodales turpis posuere sed. Cras egestas mattis nisl ut gravida.</p>
+
+            <p>Duis convallis dapibus scelerisque. Donec scelerisque congue urna vel ullamcorper. Quisque vehicula elementum tortor et lacinia. Etiam imperdiet lacus nec tincidunt tempor.</p>
+            
+            <p><code>Vivamus iaculis sem ut dui finibus, nec finibus libero euismod.</code></p>
+            
+            <p>Quisque bibendum, tortor sit amet tincidunt cursus, tortor neque euismod leo, eu tristique nisi dolor sed mauris. Aliquam mattis ipsum quis dui posuere, sed varius magna convallis. Nullam sagittis auctor ex quis pretium. Proin vitae arcu diam. Pellentesque finibus ante non orci molestie, a elementum libero viverra. Cras a mauris eget leo accumsan pretium. Integer malesuada tincidunt arcu et viverra. Ut tincidunt, sapien quis consectetur fringilla, leo justo euismod diam, eu varius ex tortor eu mauris. Etiam eu felis vestibulum, blandit ligula eget, semper diam.</p>
+        
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie fringilla euismod. Nulla sollicitudin sagittis est suscipit fringilla.</li>
+                <ul>
+                    <li><p><code>Nulla sollicitudin sagittis est suscipit fringilla.</code></p>
+                    </li>
+                </ul>
+                <li> Integer tincidunt, ante tempus aliquam dignissim, orci urna finibus neque, ut bibendum est augue vehicula dolor. Proin.</li>
+            </ul>
+            <hr>
+        </section>
+<!-- FIFTH TOPIC -->
+        <section class="main-section">
+            <h2 id="Topic5">Topic 5</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio nulla, vestibulum vitae neque eget, tempor iaculis lacus. Mauris ac bibendum neque, ut dictum elit. Vestibulum porttitor mauris in ligula rutrum ullamcorper. Vivamus vestibulum eros non fringilla interdum.</p> 
+            
+            <p><code>In consequat enim vel cursus finibus.</code></p>
+
+            <p> Nunc mattis dolor nunc, vel pretium sem pellentesque in. Praesent volutpat dui sed odio faucibus, sit amet mollis nisl mollis. Proin placerat, orci nec mattis facilisis, augue nibh faucibus dolor, in imperdiet neque sapien lacinia nulla. In pretium lorem quam, sed sodales turpis posuere sed. Cras egestas mattis nisl ut gravida.</p>
+
+            <p>Duis convallis dapibus scelerisque. Donec scelerisque congue urna vel ullamcorper. Quisque vehicula elementum tortor et lacinia. Etiam imperdiet lacus nec tincidunt tempor.</p>
+             
+            <p><code>Vivamus iaculis sem ut dui finibus, nec finibus libero euismod.</code></p>
+            
+            <p>Quisque bibendum, tortor sit amet tincidunt cursus, tortor neque euismod leo, eu tristique nisi dolor sed mauris. Aliquam mattis ipsum quis dui posuere, sed varius magna convallis. Nullam sagittis auctor ex quis pretium. Proin vitae arcu diam. Pellentesque finibus ante non orci molestie, a elementum libero viverra. Cras a mauris eget leo accumsan pretium. Integer malesuada tincidunt arcu et viverra. Ut tincidunt, sapien quis consectetur fringilla, leo justo euismod diam, eu varius ex tortor eu mauris. Etiam eu felis vestibulum, blandit ligula eget, semper diam.</p>
+        
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie fringilla euismod. Nulla sollicitudin sagittis est suscipit fringilla.</li>
+                <ul>
+                    <li><p><code>Nulla sollicitudin sagittis est suscipit fringilla.</code></p>
+                    </li>
+                </ul>
+                <li> Integer tincidunt, ante tempus aliquam dignissim, orci urna finibus neque, ut bibendum est augue vehicula dolor. Proin.</li>
+            </ul>
+            <hr>
+        </section>
+    </main> 
+
+</body>
+</html>
+<!-- 07Jul19: HAVE CREATED SORT OF AN OUTLINE FOR THE TECHNICAL DOCUMENT PAGE WHICH INCLUDES A GRID CONTAINING A NAVBAR ON THE LEFT AND THE MAIN CONTENT TO THE RIGHT WITH MOST OF THE SPACE SAVED FOR THE CONTENT. NEED TO COME UP WITH AN ACTUAL IDEA OR SUBJECT MATTER FOR THE TECHNICAL DOCUMENT PAGE. ***SIDE NOTE: THE BOTTOM BORDER OF THE NAV IS THICKER THAN THE REST OF THE BORDERS, LOOK INTO THIS AND CORRECT. -->
+<!-- 1552 07Jul19: CREATED A COMPLETE TEMPLATE OF THE TECHNICAL DOCUMENT PAGE. ALSO FIXED THE CORRESPONDING SIDE NOTE ABOVE. ALL THAT IS LEFT IS TO ADD MEANINGFUL SUBJECT MATTER AND PERHAPS ADD SOME COLOR - VERY BLACK/WHITE/GREY AND UNINTERESTING. -->
+
+
+
+
+
+
+<!-- 
+<p> placeholder:
+
+    {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio nulla, vestibulum vitae neque eget, tempor iaculis lacus. Mauris ac bibendum neque, ut dictum elit. Vestibulum porttitor mauris in ligula rutrum ullamcorper. Vivamus vestibulum eros non fringilla interdum. In consequat enim vel cursus finibus. Nunc mattis dolor nunc, vel pretium sem pellentesque in. Praesent volutpat dui sed odio faucibus, sit amet mollis nisl mollis. Proin placerat, orci nec mattis facilisis, augue nibh faucibus dolor, in imperdiet neque sapien lacinia nulla. In pretium lorem quam, sed sodales turpis posuere sed. Cras egestas mattis nisl ut gravida.
+
+    Duis convallis dapibus scelerisque. Donec scelerisque congue urna vel ullamcorper. Quisque vehicula elementum tortor et lacinia. Etiam imperdiet lacus nec tincidunt tempor. Vivamus iaculis sem ut dui finibus, nec finibus libero euismod. Quisque bibendum, tortor sit amet tincidunt cursus, tortor neque euismod leo, eu tristique nisi dolor sed mauris. Aliquam mattis ipsum quis dui posuere, sed varius magna convallis. Nullam sagittis auctor ex quis pretium. Proin vitae arcu diam. Pellentesque finibus ante non orci molestie, a elementum libero viverra. Cras a mauris eget leo accumsan pretium. Integer malesuada tincidunt arcu et viverra. Ut tincidunt, sapien quis consectetur fringilla, leo justo euismod diam, eu varius ex tortor eu mauris. Etiam eu felis vestibulum, blandit ligula eget, semper diam.}
+
+<ul>/<li> place holders:
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie fringilla euismod. Nulla sollicitudin sagittis est suscipit fringilla. Integer tincidunt, ante tempus aliquam dignissim, orci urna finibus neque, ut bibendum est augue vehicula dolor. Proin.
+
+ -->
