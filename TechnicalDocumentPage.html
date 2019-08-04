@@ -15,174 +15,544 @@ User Story #13: When I click on a navbar element, the page should navigate to th
 User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.
 User Story #15: My Technical Documentation page should use at least one media query.
  -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="TechnicalDocumentPage.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <title>Technical Document Title</title>
-</head>
-<body>
-
-       <nav id="navbar">
-        <h1>Header for Nav</h1>
-        <ul>
-            <a href="#Topic1"><li>Topic1</li></a>
-            <a href="#Topic2"><li>Topic2</li></a>
-            <a href="#Topic3"><li>Topic3</li></a>
-            <a href="#Topic4"><li>Topic4</li></a>
-            <a href="#Topic5"><li>Topic5</li></a>
-        </ul>
-    </nav>
-<!-- FIRST TOPIC -->
-    <main id="main-doc">
-        <section class="main-section">
-            <h2 id="Topic1">Topic 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio nulla, vestibulum vitae neque eget, tempor iaculis lacus. Mauris ac bibendum neque, ut dictum elit. Vestibulum porttitor mauris in ligula rutrum ullamcorper. Vivamus vestibulum eros non fringilla interdum.</p> 
-            
-            <p><code>In consequat enim vel cursus finibus.</code></p>
-
-            <p> Nunc mattis dolor nunc, vel pretium sem pellentesque in. Praesent volutpat dui sed odio faucibus, sit amet mollis nisl mollis. Proin placerat, orci nec mattis facilisis, augue nibh faucibus dolor, in imperdiet neque sapien lacinia nulla. In pretium lorem quam, sed sodales turpis posuere sed. Cras egestas mattis nisl ut gravida.</p>
-
-            <p>Duis convallis dapibus scelerisque. Donec scelerisque congue urna vel ullamcorper. Quisque vehicula elementum tortor et lacinia. Etiam imperdiet lacus nec tincidunt tempor.</p>
-
-            <p><code>Vivamus iaculis sem ut dui finibus, nec finibus libero euismod.</code></p>
-            
-            <p>Quisque bibendum, tortor sit amet tincidunt cursus, tortor neque euismod leo, eu tristique nisi dolor sed mauris. Aliquam mattis ipsum quis dui posuere, sed varius magna convallis. Nullam sagittis auctor ex quis pretium. Proin vitae arcu diam. Pellentesque finibus ante non orci molestie, a elementum libero viverra. Cras a mauris eget leo accumsan pretium. Integer malesuada tincidunt arcu et viverra. Ut tincidunt, sapien quis consectetur fringilla, leo justo euismod diam, eu varius ex tortor eu mauris. Etiam eu felis vestibulum, blandit ligula eget, semper diam.</p>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <script src="https://kit.fontawesome.com/778819cbd0.js"></script>
+     <script src="TechnicalDocumentPage.js"></script>
+     <link rel="stylesheet" href="TechnicalDocumentPage2.0.css">
+     <title>Keurig User Manual</title>
+ </head>
+ <body>
+        <nav id="navbar">
+                <h1 class="mainSubject">Keurig K-Cup K40/K45 Elite Brewer</h1>
+                <ul class="navigation-grid">
+                    <!-- TOPIC 1 NAV -->
+                        <a class="mainTopic1" href="#Topic1"><h2 style="display:inline; border:none;">Set-Up</h2></a>
+                        <button class="sub-btn1" onclick="dropdown1()"><i class="fas fa-caret-down"></i></button>  
+                    <!-- WOULD LIKE TO MAKE THIS SUBMENU APPEAR ONLCICK W/ JS -->
+                    <!-- WOULD LIKE TO MAKE THE BACKGROUND COLOR OF DROPDOWN MENU DARKER THAN THE VISIBLE MAIN TOPIC BACKGROUND WHEN I ADD COLORS -->
+                        <ul id="sub1" class="sub-menu smen1"> 
+                            <a href="#subTopic1"><li>Helpful Hints</li></a>
+                            <a href="#subTopic2"><li>Unpacking</li></a>
+                            <a href="#subTopic3"><li>Features</li></a>
+                        </ul>
         
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie fringilla euismod. Nulla sollicitudin sagittis est suscipit fringilla.</li>
-                <ul>
-                    <li><p><code>Nulla sollicitudin sagittis est suscipit fringilla.</code></p>
-                    </li>
-                </ul>
-                <li> Integer tincidunt, ante tempus aliquam dignissim, orci urna finibus neque, ut bibendum est augue vehicula dolor. Proin.</li>
-            </ul>
-            <hr>
-        </section>
-<!-- SECOND TOPIC -->
-        <section class="main-section">
-            <h2 id="Topic2">Topic 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio nulla, vestibulum vitae neque eget, tempor iaculis lacus. Mauris ac bibendum neque, ut dictum elit. Vestibulum porttitor mauris in ligula rutrum ullamcorper. Vivamus vestibulum eros non fringilla interdum.</p> 
-            
-            <p><code>In consequat enim vel cursus finibus.</code></p>
-
-            <p> Nunc mattis dolor nunc, vel pretium sem pellentesque in. Praesent volutpat dui sed odio faucibus, sit amet mollis nisl mollis. Proin placerat, orci nec mattis facilisis, augue nibh faucibus dolor, in imperdiet neque sapien lacinia nulla. In pretium lorem quam, sed sodales turpis posuere sed. Cras egestas mattis nisl ut gravida.</p>
-
-            <p>Duis convallis dapibus scelerisque. Donec scelerisque congue urna vel ullamcorper. Quisque vehicula elementum tortor et lacinia. Etiam imperdiet lacus nec tincidunt tempor.</p>
-             
-            <p><code>Vivamus iaculis sem ut dui finibus, nec finibus libero euismod.</code></p>
-            
-            <p>Quisque bibendum, tortor sit amet tincidunt cursus, tortor neque euismod leo, eu tristique nisi dolor sed mauris. Aliquam mattis ipsum quis dui posuere, sed varius magna convallis. Nullam sagittis auctor ex quis pretium. Proin vitae arcu diam. Pellentesque finibus ante non orci molestie, a elementum libero viverra. Cras a mauris eget leo accumsan pretium. Integer malesuada tincidunt arcu et viverra. Ut tincidunt, sapien quis consectetur fringilla, leo justo euismod diam, eu varius ex tortor eu mauris. Etiam eu felis vestibulum, blandit ligula eget, semper diam.</p>
+                    <!-- TOPIC 2 NAV -->
+                        <a class="mainTopic2" href="#Topic2"><h2 style="display:inline; border:none;">Set-Up & First Brew</h2></a>
         
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie fringilla euismod. Nulla sollicitudin sagittis est suscipit fringilla.</li>
-                <ul>
-                    <li><p><code>Nulla sollicitudin sagittis est suscipit fringilla.</code></p>
-                    </li>
-                </ul>
-                <li> Integer tincidunt, ante tempus aliquam dignissim, orci urna finibus neque, ut bibendum est augue vehicula dolor. Proin.</li>
-            </ul>
-            <hr>
-        </section>
-<!-- THIRD TOPIC -->
-        <section class="main-section">
-            <h2 id="Topic3">Topic 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio nulla, vestibulum vitae neque eget, tempor iaculis lacus. Mauris ac bibendum neque, ut dictum elit. Vestibulum porttitor mauris in ligula rutrum ullamcorper. Vivamus vestibulum eros non fringilla interdum.</p> 
-            
-            <p><code>In consequat enim vel cursus finibus.</code></p>
+                    <!-- TOPIC 3 NAV -->
+                        <a class="mainTopic3" href="#Topic3"><h2 style="display:inline; border:none;">Controls & Indicators</h2></a>
 
-            <p> Nunc mattis dolor nunc, vel pretium sem pellentesque in. Praesent volutpat dui sed odio faucibus, sit amet mollis nisl mollis. Proin placerat, orci nec mattis facilisis, augue nibh faucibus dolor, in imperdiet neque sapien lacinia nulla. In pretium lorem quam, sed sodales turpis posuere sed. Cras egestas mattis nisl ut gravida.</p>
-
-            <p>Duis convallis dapibus scelerisque. Donec scelerisque congue urna vel ullamcorper. Quisque vehicula elementum tortor et lacinia. Etiam imperdiet lacus nec tincidunt tempor.</p>
-            
-            <p><code>Vivamus iaculis sem ut dui finibus, nec finibus libero euismod.</code></p>
-            
-            <p>Quisque bibendum, tortor sit amet tincidunt cursus, tortor neque euismod leo, eu tristique nisi dolor sed mauris. Aliquam mattis ipsum quis dui posuere, sed varius magna convallis. Nullam sagittis auctor ex quis pretium. Proin vitae arcu diam. Pellentesque finibus ante non orci molestie, a elementum libero viverra. Cras a mauris eget leo accumsan pretium. Integer malesuada tincidunt arcu et viverra. Ut tincidunt, sapien quis consectetur fringilla, leo justo euismod diam, eu varius ex tortor eu mauris. Etiam eu felis vestibulum, blandit ligula eget, semper diam.</p>
+                    <!-- TOPIC 4 NAV -->
+                      <a class="mainTopic4" href="#Topic4"><h2 style="display:inline; border:none;">Cleaning & Maintenance</h2></a>
+                      <button class="sub-btn4" onclick="dropdown4()"><i class="fas fa-caret-down"></i></button>  
+                        <ul id="sub4" class="sub-menu smen4">
+                            <a href="#subTopic4"><li>Cleaning</li></a>
+                            <a href="#subTopic5"><li>De-Scaling</li></a>
+                            <a href="#subTopic6"><li>Storage</li></a>
+                        </ul>
         
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie fringilla euismod. Nulla sollicitudin sagittis est suscipit fringilla.</li>
-                <ul>
-                    <li><p><code>Nulla sollicitudin sagittis est suscipit fringilla.</code></p>
-                    </li>
+                    <!-- TOPIC 5 NAV -->
+                       <a class="mainTopic5" href="#Topic5"><h2 style="display:inline; border:none;">Troubleshooting</h2></a>
                 </ul>
-                <li> Integer tincidunt, ante tempus aliquam dignissim, orci urna finibus neque, ut bibendum est augue vehicula dolor. Proin.</li>
-            </ul>
-            <hr>
-        </section>
-<!-- FOURTH TOPIC -->
-        <section class="main-section">
-            <h2 id="Topic4">Topic 4</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio nulla, vestibulum vitae neque eget, tempor iaculis lacus. Mauris ac bibendum neque, ut dictum elit. Vestibulum porttitor mauris in ligula rutrum ullamcorper. Vivamus vestibulum eros non fringilla interdum.</p> 
-            
-            <p><code>In consequat enim vel cursus finibus.</code></p>
-
-            <p> Nunc mattis dolor nunc, vel pretium sem pellentesque in. Praesent volutpat dui sed odio faucibus, sit amet mollis nisl mollis. Proin placerat, orci nec mattis facilisis, augue nibh faucibus dolor, in imperdiet neque sapien lacinia nulla. In pretium lorem quam, sed sodales turpis posuere sed. Cras egestas mattis nisl ut gravida.</p>
-
-            <p>Duis convallis dapibus scelerisque. Donec scelerisque congue urna vel ullamcorper. Quisque vehicula elementum tortor et lacinia. Etiam imperdiet lacus nec tincidunt tempor.</p>
-            
-            <p><code>Vivamus iaculis sem ut dui finibus, nec finibus libero euismod.</code></p>
-            
-            <p>Quisque bibendum, tortor sit amet tincidunt cursus, tortor neque euismod leo, eu tristique nisi dolor sed mauris. Aliquam mattis ipsum quis dui posuere, sed varius magna convallis. Nullam sagittis auctor ex quis pretium. Proin vitae arcu diam. Pellentesque finibus ante non orci molestie, a elementum libero viverra. Cras a mauris eget leo accumsan pretium. Integer malesuada tincidunt arcu et viverra. Ut tincidunt, sapien quis consectetur fringilla, leo justo euismod diam, eu varius ex tortor eu mauris. Etiam eu felis vestibulum, blandit ligula eget, semper diam.</p>
-        
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie fringilla euismod. Nulla sollicitudin sagittis est suscipit fringilla.</li>
-                <ul>
-                    <li><p><code>Nulla sollicitudin sagittis est suscipit fringilla.</code></p>
+            </nav>
+        <main id="main-doc">
+            <section>
+                <h2 id="Topic1">Set-up</h2>
+                <h3 id="subTopic1"><strong>Helpful Hints</strong> <hr class="subTopic-hr"></h3>
+                <ol>
+                    <li>
+                        <p><strong>Plug brewer into its own grounded outlet.</strong> If the electric circuit is overloaded with other
+                        appliances, your brewer may not function
+                        properly. The brewer should be operated on
+                        its own circuit, separate from other appliances.</p>
                     </li>
-                </ul>
-                <li> Integer tincidunt, ante tempus aliquam dignissim, orci urna finibus neque, ut bibendum est augue vehicula dolor. Proin.</li>
-            </ul>
-            <hr>
-        </section>
-<!-- FIFTH TOPIC -->
-        <section class="main-section">
-            <h2 id="Topic5">Topic 5</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio nulla, vestibulum vitae neque eget, tempor iaculis lacus. Mauris ac bibendum neque, ut dictum elit. Vestibulum porttitor mauris in ligula rutrum ullamcorper. Vivamus vestibulum eros non fringilla interdum.</p> 
-            
-            <p><code>In consequat enim vel cursus finibus.</code></p>
 
-            <p> Nunc mattis dolor nunc, vel pretium sem pellentesque in. Praesent volutpat dui sed odio faucibus, sit amet mollis nisl mollis. Proin placerat, orci nec mattis facilisis, augue nibh faucibus dolor, in imperdiet neque sapien lacinia nulla. In pretium lorem quam, sed sodales turpis posuere sed. Cras egestas mattis nisl ut gravida.</p>
-
-            <p>Duis convallis dapibus scelerisque. Donec scelerisque congue urna vel ullamcorper. Quisque vehicula elementum tortor et lacinia. Etiam imperdiet lacus nec tincidunt tempor.</p>
-             
-            <p><code>Vivamus iaculis sem ut dui finibus, nec finibus libero euismod.</code></p>
-            
-            <p>Quisque bibendum, tortor sit amet tincidunt cursus, tortor neque euismod leo, eu tristique nisi dolor sed mauris. Aliquam mattis ipsum quis dui posuere, sed varius magna convallis. Nullam sagittis auctor ex quis pretium. Proin vitae arcu diam. Pellentesque finibus ante non orci molestie, a elementum libero viverra. Cras a mauris eget leo accumsan pretium. Integer malesuada tincidunt arcu et viverra. Ut tincidunt, sapien quis consectetur fringilla, leo justo euismod diam, eu varius ex tortor eu mauris. Etiam eu felis vestibulum, blandit ligula eget, semper diam.</p>
-        
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie fringilla euismod. Nulla sollicitudin sagittis est suscipit fringilla.</li>
-                <ul>
-                    <li><p><code>Nulla sollicitudin sagittis est suscipit fringilla.</code></p>
+                    <li>
+                        <p><strong>Keep your brewer turned “ON.”</strong> To brew a fresh cup of coffee, tea or hot cocoa
+                        anytime you want, keep your brewer turned
+                        “ON” all the time. However, you can set the
+                        brewer to automatically turn off two hours after
+                        your last brew. Follow the simple instructions
+                        on page 10 to make using the brewer convenient
+                        for you</p>
                     </li>
-                </ul>
-                <li> Integer tincidunt, ante tempus aliquam dignissim, orci urna finibus neque, ut bibendum est augue vehicula dolor. Proin.</li>
-            </ul>
-            <hr>
-        </section>
-    </main> 
 
-</body>
-</html>
-<!-- 07Jul19: HAVE CREATED SORT OF AN OUTLINE FOR THE TECHNICAL DOCUMENT PAGE WHICH INCLUDES A GRID CONTAINING A NAVBAR ON THE LEFT AND THE MAIN CONTENT TO THE RIGHT WITH MOST OF THE SPACE SAVED FOR THE CONTENT. NEED TO COME UP WITH AN ACTUAL IDEA OR SUBJECT MATTER FOR THE TECHNICAL DOCUMENT PAGE. ***SIDE NOTE: THE BOTTOM BORDER OF THE NAV IS THICKER THAN THE REST OF THE BORDERS, LOOK INTO THIS AND CORRECT. -->
-<!-- 1552 07Jul19: CREATED A COMPLETE TEMPLATE OF THE TECHNICAL DOCUMENT PAGE. ALSO FIXED THE CORRESPONDING SIDE NOTE ABOVE. ALL THAT IS LEFT IS TO ADD MEANINGFUL SUBJECT MATTER AND PERHAPS ADD SOME COLOR - VERY BLACK/WHITE/GREY AND UNINTERESTING. -->
+                    <li>
+                        <p>
+                            <strong>For the best tasting gourmet coffee, tea or
+                            hot cocoa, Keurig recommends using bottled
+                            or filtered water.</strong> Water quality varies from place to place.
+                            If you notice an undesirable taste in your
+                            cup of coffee, tea or hot cocoa (such as chlorine
+                            or other mineral tastes) we recommend you
+                            consider using bottled water or water from a
+                            filtration system. For best results, carefully
+                            follow manufacturer’s instructions when using
+                            any water filtration system</p>
+                    </li>
 
+                    <li>
+                        <p>
+                            <strong>Customize the size, flavor & brew that’s
+                            perfect for you.</strong> With the choice of over 200varieties of K-Cup®
+                            packs and 3 brew sizes (Small Cup-5.25 oz.,
+                            Small Mug-7.25 oz. and Large Mug-9.25 oz.),
+                            your Keurig® brewer gives you endless options
+                            to customize the size, flavor and brew that’s
+                            perfect for you. For a strong, intense cup, select
+                            an Extra Bold K-Cup® pack (with up to 30%
+                            more ground coffee than regular varieties) and
+                            brew size that’s right for you. The smaller the
+                            brew size, the more intense flavor in your cup.
+                            The larger the brew size, the less intense flavor
+                            in your cup</p>
+                    </li>
 
+                    <li>
+                        <p><strong>Remove K-Cup® pack after use</strong> Please see "Set-Up & First Brew" for brewing instructions.</p>
+                    </li>
 
+                    <li>
+                        <p><strong>Brewing into a travel mug.</strong> To brew into a travel mug, simply remove the
+                        Drip Tray Assembly and place the travel mug
+                        on the Drip Tray Base</p>
+                    </li>
 
+                    <li>
+                        <p><strong>De-scale brewer regularly.</strong> Please see "De-Scaling" for instructions.</p>
+                    </li>
 
+                </ol>
+                <h3 id="subTopic2"><strong>Unpacking Instructions</strong> <hr class="subTopic-hr"></h3>
+                <ol>
+                    <li>
+                        <p>. Place brewer box on a large steady surface
+                                (such as a table or countertop) or on the floor.
+                                Open the box.</p>
+                    </li>
 
-<!-- 
-<p> placeholder:
+                    <li>
+                        <p>Remove enclosed literature</p>
+                    </li>
 
-    {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio nulla, vestibulum vitae neque eget, tempor iaculis lacus. Mauris ac bibendum neque, ut dictum elit. Vestibulum porttitor mauris in ligula rutrum ullamcorper. Vivamus vestibulum eros non fringilla interdum. In consequat enim vel cursus finibus. Nunc mattis dolor nunc, vel pretium sem pellentesque in. Praesent volutpat dui sed odio faucibus, sit amet mollis nisl mollis. Proin placerat, orci nec mattis facilisis, augue nibh faucibus dolor, in imperdiet neque sapien lacinia nulla. In pretium lorem quam, sed sodales turpis posuere sed. Cras egestas mattis nisl ut gravida.
+                    <li>
+                        <p>Turn the box on its side with front of box
+                                face down.</p>
+                    </li>
 
-    Duis convallis dapibus scelerisque. Donec scelerisque congue urna vel ullamcorper. Quisque vehicula elementum tortor et lacinia. Etiam imperdiet lacus nec tincidunt tempor. Vivamus iaculis sem ut dui finibus, nec finibus libero euismod. Quisque bibendum, tortor sit amet tincidunt cursus, tortor neque euismod leo, eu tristique nisi dolor sed mauris. Aliquam mattis ipsum quis dui posuere, sed varius magna convallis. Nullam sagittis auctor ex quis pretium. Proin vitae arcu diam. Pellentesque finibus ante non orci molestie, a elementum libero viverra. Cras a mauris eget leo accumsan pretium. Integer malesuada tincidunt arcu et viverra. Ut tincidunt, sapien quis consectetur fringilla, leo justo euismod diam, eu varius ex tortor eu mauris. Etiam eu felis vestibulum, blandit ligula eget, semper diam.}
+                    <li>
+                        <p>. Reach into the box and grasp the plastic
+                                bag that contains the brewer</p>
+                    </li>
 
-<ul>/<li> place holders:
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie fringilla euismod. Nulla sollicitudin sagittis est suscipit fringilla. Integer tincidunt, ante tempus aliquam dignissim, orci urna finibus neque, ut bibendum est augue vehicula dolor. Proin.
+                    <li>
+                        <p>5. Carefully pull the plastic bag (and packaging
+                                materials) toward you and out of the box. The
+                                brewer will still be encased in the polyfoam
+                                and be on its side</p>
+                    </li>
 
- -->
+                    <li>
+                        <p>Remove the top polyfoam packaging material.</p>
+                    </li>
+
+                    <li>
+                        <p>Carefully lift brewer off of the bottom polyfoam
+                                and place it upright on a flat, steady surface.</p>
+                    </li>
+
+                    <li>
+                        <p>Lift plastic bag off of brewer.</p>
+                    </li>
+
+                    <li>
+                        <p>Record the serial number for this brewer on
+                                page 3 of this guide. The serial number can be
+                                found on the bottom of the brewer box or on the
+                                brewer behind the Drip Tray (when removed).</p>
+                    </li>
+
+                    <li>
+                        <p>Place the brewer upright on a flat, steady
+                                surface. Remove tape holding Water Reservoir
+                                in place.</p>
+                    </li>
+                </ol>
+                <p>We recommend you save all packing materials in
+                        case future shipping of the product is necessary</p>
+                <div class="attentionBox">
+                      <code><strong>Warning:</strong> Keep all plastic bags away from children.</code>
+                </div>
+                <h3 id="subTopic3"><strong>Features</strong> <hr class="subTopic-hr"></h3>
+                
+                <div class="imgContainer">
+                    <img src="KFig1.jpg" alt="Water Reservoir">
+                    <img src="KFig3.jpg" alt="Keurig Unit">
+                    <img src="KFig2.jpg" alt="Keurig Unit Components">
+                    <img src="KFig4.jpg" alt="Button Panel">
+                </div>
+                <h3>K40/K45 Elite Brewer <hr class="subTopic-hr"></h3>
+                <ol style="list-style: upper-alpha;">
+                    <li>Water Reservoir Lid</li>
+                    <li>Water Reservoir</li>
+                    <li>MAX FILL</li>
+                    <li>Water Reservoir Lock Tab Slots</li>
+                    <li>Handle</li>
+                    <li>Funnel</li>
+                    <li>K-Cup Pack Holder [E and F are the K-Cup Pack Holder Assembly]</li>
+                    <li>Lid</li>
+                    <li>K-Cup Pack Assembly Housing</li>
+                    <li>Housing</li>
+                    <li>Drip Trap Plate</li>
+                    <li>Drip Tray</li>
+                    <li>Drip Tray Base</li>
+                    <li>Vent</li>
+                    <li>Power Cord</li>
+                <!-- </ol> -->
+                <div style="margin: 0 -40px;"><h3>Controls and Indicators <hr class="subTopic-hr"></h3></div>
+                <!-- <ol> -->
+                    <li>Small Cup Button</li>
+                    <li>Small Mug Button</li>
+                    <li>Large Mug Button</li>
+                    <li>Power Button</li>
+                    <li>Power Light [Green]</li>
+                    <li>Auto Off Button</li>
+                    <li>Auto Off Light [Green]</li>
+                    <li>Heating Light [Red]</li>
+                    <li>Descale Light [Red]</li>
+                    <li>Add Water Light [Blue]</li>
+                </ol>
+            </section>
+<!-- 28JUL19: STARTED WORKING ON THE KEURIG USER MANUAL. START HERE FOR SECTION 2 -->
+<hr>
+            <section id="Topic2">
+                <h2>Set-Up & First Brew</h2>
+                <div class="attentionBox" style="margin-bottom:2%;">
+                    <code><strong>IMPORTANT:</strong> You cannot use your Keurig® brewer until
+                        it has been set-up for its first use as set forth below</code>
+                </div>
+                <div class="attentionBox">
+                    <code><strong>NOTE:</strong> If brewer has been exposed to temperatures
+                        below freezing, allow brewer at least two hours to
+                        reach room temperature before brewing. A frozen
+                        or extremely cold brewer will not operate</code>
+                </div>
+                <h3>Setting Up Your Brewer <hr class="subTopic-hr"></h3>
+                
+                    
+                    <ol>
+                        <img src="KFig5.jpg" alt=" Fig. 1" style="float:left; margin-right:7%;">
+                        <li>Unwrap cord and plug the brewer into a
+                                grounded outlet. Remove all pieces of
+                                packing tape.</li>
+                        <li>Place a large mug (10 oz. minimum) on
+                                the Drip Tray Plate.</li>
+                        <li>Remove the Water Reservoir from brewer by
+                                first removing Lid from Reservoir (fig. 1), then
+                                lifting Reservoir straight up and away from
+                                brewer (may be tight). Rinse with fresh water</li>
+                        <li>Fill Water Reservoir with bottled or filtered
+                                water so that the water is to and not beyond
+                                the MAX FILL line</li>
+                        <img src="KFig6.jpg" alt="Fig. 2" style="float:left; Margin-right:7%;">
+                        <li>Place Water Reservoir base into the left side of
+                                the brewer and be sure the Water Reservoir
+                                Lock Tabs engage with the brewer (fig. 2).
+                                Replace Lid on Water Reservoir.</li>
+                        <li>Press Power Button found on upper right
+                                panel of the brewer. The green Power Light
+                                will illuminate.</li>
+                        
+                        <div class="attentionBox" style="margin-bottom:2%;">
+                            <code><strong>NOTE:</strong> NOTE: A K-Cup® pack should
+                                not be used for this sequence.</code>
+                        </div>
+                        <div class="attentionBox" style="margin-bottom:2%;">
+                            <code><strong>NOTE:</strong> If the Water Reservoir is empty or
+                                not in place on the brewer, the blue Add Water
+                                Light will illuminate. The Small Mug Button will
+                                not be activated until water is added to the
+                                Water Reservoir.</code>
+                        </div>
+                        <img src="KFig7.jpg" alt="Fig. 3" style="float:left; margin-right:7%;">
+                        <li>The brewer will automatically fill with water and
+                                then the water will be heated. This will take
+                                about 4 minutes. During the heating period, the
+                                red Heating Light will illuminate. Once the
+                                water is heated, the red Heating Light will turn
+                                off and the Small Cup, Small Mug and Large
+                                Mug Buttons will illuminate.</li>
+                        <div class="attentionBox" style="margin:2% auto;">
+                            <code><strong>NOTE:</strong> You may see small amounts of water coming from the Vent and dripping
+                                into the Water Reservoir during this and subsequent heating – this is normal.</code>
+                        </div>
+                        <li>. Lift and lower the Handle. Press the Small Mug Button to start a
+                                cleansing brew (fig. 3). Pour the hot water into the sink.</li>
+                        <li>The brewer may take 15 seconds to reheat water between brews during
+                                which time the red Heating Light may be illuminated. When the water has
+                                heated, the red Heating Light will turn off.</li>
+                        <li>The one-time set-up process is now complete and you are ready to brew!</li>
+                    </ol>
+                    <!-- 30JUL19: START HERE! STILL IN SECTION 1 OF USER MANUAL. LOOK FOR THE CORRESPONDING H3 BELOW IN THE KEURIG USER MANUAL -->
+                <h3>Ready to Brew Your First Cup <hr class="subTopic-hr"></h3>
+                <ol>
+                    <img src="KFig8.jpg" alt="Fig. 4" style="float:left; margin-right:7%;">
+                    <li>The green Power Light will illuminate to  indicate the brewer is powered on.</li>
+                    <li>Place a cup or mug on the Drip Tray Plate.</li>
+                    <li>Lift the Handle and the K-Cup® Pack Holder  will open toward you (fig. 4).</li>
+                    <li>Select a K-Cup® pack.</li>
+                    <div class="attentionBox" style="margin:2% auto;">
+                        <code><strong>NOTE:</strong> Do not remove the  foil lid or puncture the  K-Cup® pack.</code>
+                    </div>
+                        
+                    <li>Place a K-Cup® pack in the  K-Cup® Pack Holder (fig. 5). </li>
+                    <div class="attentionBox" style="margin:2% auto;">
+                        <code><strong>CAUTION:</strong> There are two sharp needles  that puncture the K-Cup® pack, one above  the K-Cup® Pack Holder and the other in the bottom of the K-Cup® Pack Holder. To avoid risk   of injury, do not put your fingers in the K-Cup® Pack Holder.</code>
+                    </div>
+                    <li>Lower the Handle completely to close the Lid</li>
+                    <img src="KFig9.jpg" alt="Fig. 5" style="float:left; margin-right:7%;">
+                    <img src="KFig10.jpg" alt="Fig. 5 cont." style="float:left;">
+                    <li>Select your brew size: The Small Cup choice will yield a 5.25 oz. serving, the Small Mug will yield a 7.25 oz. serving and the Large Mug will yield a  9.25 oz. serving</li>
+                    <div class="attentionBox" style="margin:2% auto;">
+                        <code><strong>NOTE:</strong> If you do not push a Brew Button in 60 seconds, the Brew Buttons will be disabled to prevent accidental activation. Re-activate the Brew Buttons by lifting and lowering the Handle completely</code>
+                    </div>
+                    
+                    <li>The blue Brew Button you choose will remain illuminated while brewing</li>
+                    <div class="attentionBox" style="margin:2% auto;">
+                        <code><strong>CAUTION:</strong> There is extremely hot water in the K-Cup® Pack Holder during the brew process. To avoid risk of injury, do not lift the Handle or open the K-Cup® Pack Assembly Housing during the brew process</code>
+                    </div>
+                    <li>There may be a short pause before the brewing process begins. The entire brew process lasts for approximately 1 minute and ends with a burst of air to remove all liquid from the K-Cup® pack</li>
+                    <li>Lift the Handle and dispose of the used K-Cup® pack.</li>
+                    <div class="attentionBox">
+                        <code><strong>CAUTION:</strong> K-Cup® pack will be hot</code>
+                    </div>
+                    <li>Enjoy your first cup of Keurig Brewed®  gourmet coffee, tea or hot cocoa</li>
+                    <li>The red Heating Light may be illuminated as the water is heated for the next brew cycle. The brewer will be ready for use in approximately 15 seconds</li>
+                    <div class="attentionBox" style="margin:2% auto;">
+                        <code><strong>NOTE:</strong> During this period, your brewer will prepare for the next brew. The pump may make a vibrating sound. This is normal.</code>
+                    </div> 
+                </ol>
+                <h3>Stopping the Brew Process <hr class="subTopic-hr"></h3>
+                <p>If you need to stop the brewing after the process has started, press the Power Button to turn the brewer off. The flow of coffee, tea or hot cocoa  will stop, the heating element will shut off and the green Power Light will turn off</p>
+                <div class="attentionBox" style="margin:2% auto;">
+                    <code><strong>NOTE:</strong> You may get less coffee, tea or hot cocoa in your cup during your next brew. We recommend that you perform a cleansing brew after a terminated brew. Then your NEXT brew will be the proper volume.</code>
+                </div>
+                <h3>Adding Water <hr class="subTopic-hr"></h3>
+                <img src="KFig11.jpg" alt="Fig. 6" style="margin-right: 7%; float:left;">
+                <p>The blue Add Water Light will illuminate when the water level in the Water Reservoir is low or if the Water Reservoir has been removed (fig. 6). The brewer will not allow you to brew when the blue Add Water Light is illuminated.</p>
+                <p>The Water Reservoir can be filled in two ways.</p>
+                <ol>
+                    <li>Remove the Water Reservoir Lid and pour water directly into the Water Reservoir while it is still attached to the brewer. Fill with water to and not beyond the MAX FILL line. Replace the lid.</li>
+                    <li>Remove the Water Reservoir from brewer by first removing the Lid from the Water Reservoir, then lifting the Water Reservoir straight up and away from brewer. Fill with water to and not beyond the MAX FILL line. Place the Water Reservoir back on the brewer and replace the Lid.</li>
+                    <div class="attentionBox">
+                        <code><strong>IMPORTANT:</strong> Do not remove the Water Reservoir during the brewing process.</code>
+                    </div>
+                </ol>
+                <h3>Brewing Iced Beverages <hr class="subTopic-hr"></h3>
+                <p>Your iced tea and iced coffee taste best when fresh-brewed hot over ice.  Try it by placing a tall cup filled with ice on the Drip Tray Plate (the Drip  Tray Assembly can be removed to accommodate taller cups), choose your favorite K-Cup® pack and press your preferred brew size. Also, look for the  Brew Over Ice icon on K-Cup® packs that are specially crafted to brew  over ice!</p>
+                <div class="attentionBox" style="margin:2% auto;">
+                    <code><strong>IMPORTANT:</strong> Do not brew into a cup made of glass. Doing so may  cause the glass to crack or break.</code>
+                </div>
+                <h3>Brewing Hot Water <hr class="subTopic-hr"></h3>
+                <p>Your brewer is able to produce hot water for making hot cocoa in a packet,  for use in cooking, for making soups, etc. Simply raise and lower the Handle on the brewer without adding a K-Cup® pack. The blue Brew Buttons will flash. Be sure to have a mug or cup on the Drip Tray Plate and then press a Brew Button.</p>
+                <div class="attentionBox" style="margin:2% auto;">
+                    <code><strong>NOTE:</strong> After brewing a hot cocoa K-Cup® pack, we recommend running a cleansing brew without a K-Cup® pack.</code>
+                </div>
+                <h3>Purging the Brewer <hr class="subTopic-hr"></h3>
+                <p>If your brewer has not been used for more than one week, you should purge the water from the internal tank.</p>
+                <ol>
+                    <li>If there is water in the Water Reservoir, remove the Lid, then lift Reservoir straight up and away from brewer. Discard water, rinse and refill with water. Place the Water Reservoir back on the brewer and replace the  Lid. (If there is no water in Reservoir, simply refill.)</li>
+                    <li>Be sure the brewer is turned on. Lift and lower the Handle on the brewer without inserting a K-Cup® pack and wait until the red Heating Light turns off.</li>
+                    <li>The blue Brew Buttons will flash. Be sure to have a mug or cup on the Drip Tray Plate and then press a Brew Button</li>
+                    <li>Repeat steps 2 and 3 two more times to completely purge water  from internal tank.</li>
+                </ol>
+            </section>
+<hr>
+
+            <section id="Topic3">
+                <h2>Controls & Indicators [LED Control Center]</h2>
+                <h3>Programming Auto Off Timer Feature</h3>
+                <p>Set the brewer to turn off two hours after the last brew.</p>
+                <ol>
+                    <img src="KFig12.jpg" alt="Fig. 7" style="margin-right:7%; float:left;">
+                    <li>Press the Power Button to turn on the brewer.</li>
+                    <li>Press the black Auto Off Button to turn on the Auto Off Timer feature (fig. 7). The green Auto Off Light will illuminate <br> 
+                    When the Auto Off Timer is enabled, your brewer will automaticallyturn off two hours after your last brew.</li>
+                    <li>To disable the Auto Off Timer, simply press the black Auto Off Button again and the green Auto Off Light will turn off.</li>
+                </ol>
+                
+
+            </section>
+<hr>
+
+            <section id="Topic4">
+                <h2>Cleaning & Maintenance</h2>
+                <h3 id="subTopic4">Cleaning External Parts <hr class="subTopic-hr"></h3>
+                <p>Regular cleaning of the brewer’s external components is recommended.</p>
+                <ol>
+                    <li>Never immerse the brewer in water or other liquids. The Housing and other external components may be cleaned with a soapy, damp, non-abrasive cloth.</li>
+                    <li>The Drip Tray can accumulate up to 8 oz. of overflow. The Drip Tray and Drip Tray Plate should be periodically inspected and rinsed clean. To remove the Drip Tray Assembly, simply slide it toward you, keeping it level at all times to avoid spilling. The Drip Tray and Drip Tray Plate should not  be placed in the dishwasher. They should be cleaned with a damp, soapy, non-abrasive cloth and rinsed thoroughly.</li>
+                </ol>
+                <h3>Cleaning the K-cup® Pack holder assembly <hr class="subTopic-hr"></h3>
+                <ol>
+                    <img src="KFig13.jpg" alt="Fig. 8" style="float:left; margin-right:7%;">
+                    <li><strong>Cleaning the Parts —</strong> The K-Cup® Pack Holder  Assembly can be placed onto the top shelf of a dishwasher.
+                    <div class="attentionBox" style="margin:2% auto; margin-left: 8%; margin-top:5%;">
+                        <code><strong>NOTE:</strong> Use low temperature cycles in the dishwasher.</code>
+                    </div>
+                    To remove from the brewer, lift the Handle and grasp the top of the K-Cup® Pack Holder with one hand while pushing up on the bottom of the K-Cup® Pack Holder from underneath with the other until it releases  (fig. 8). After cleaning, align the K-Cup® Pack Holder with the opening using the two front ribs as a guide and snap into place from the top. </li>
+                    <li><strong>Cleaning the Funnel —</strong> The Funnel can be removed from the K-Cup® Pack Holder by pulling on it until it pops off (fig. 9). The Funnel  is dishwasher safe. To replace it, just snap it  back onto the K-Cup® Pack Holder Assembly.</li>
+                    <img src="KFig14.jpg" alt="Fig. 9" style="float:left; margin-right:7%;">
+                    <li><strong>Cleaning the Exit Needle —</strong> The Exit Needle is located on the inside bottom of the K-Cup® Pack Holder Assembly. Should a clog arise due to coffee grinds, it can be cleaned using a paper clip or similar tool. Remove K-Cup® Pack Holder Assembly and detach Funnel. Insert the paper clip (fig. 9) into the Exit Needle to loosen the clog and push it out. The K-Cup® Pack Holder is dishwasher safe.</li>
+                </ol>
+                <div class="attentionBox" style="margin:2% auto;">
+                    <code><strong>CAUTION:</strong> There are sharp needles that puncture the K-Cup® pack above the K-Cup® Pack Holder and in the bottom of the K-Cup® Pack Holder. To avoid risk of injury, do not put your fingers in the K-Cup® Pack Assembly Housing.</code>
+                </div>
+
+                <h3>cleaning the Water reservoir & Water reservoir Lid <hr class="subTopic-hr"></h3>
+                <p>The Water Reservoir Lid and Water Reservoir should be periodically inspected and cleaned.</p>
+                <p>The Water Reservoir Lid or Water Reservoir should not be put into the dishwasher. They should be cleaned with a damp, soapy, non-abrasive  cloth and rinsed thoroughly. Do not dry the inside of the Water Reservoir  with a cloth as lint may remain.</p>
+                <p>To clean the filter screen at the base of your Water Reservoir, empty  the Water Reservoir and follow one or all of the following procedures. </p>
+                <div class="attentionBox" style="margin: 2% auto;">
+                    <code><strong>NOTE:</strong> If you are using a water filter inside the Water Reservoir, remove  it before cleaning.</code>
+                </div>
+                <ol>
+                    <li>Rinse the filter screen with the strong force of water from your faucet. </li>
+                    <li>If you have a sprayer, aim the water spray at the filter screen. </li>
+                    <li>Fill the Water Reservoir with approximately two inches of clean water and agitate (shake) the Water Reservoir</li>
+                </ol>
+                <p>Empty the Water Reservoir then fill it with clean water and return it to the brewer. If needed, repeat above procedures.</p>
+                <div class="attentionBox" style="margin:2% auto;">
+                    <code><strong>CAUTION:</strong> Please rinse the  Water Reservoir thoroughly after cleaning. This will ensure that no cleaners or cleaning solutions remain in this area as they may contaminate the water  supply in the brewer.</code>
+                </div>
+
+                <h3 id="subTopic5">De-Scaling Your Brewer <hr class="subTopic-hr"></h3>
+                <p>Mineral content in water varies from place to place. Depending on the mineral content of the water in your area, calcium deposits or scale may build up in your brewer. Scale is non-toxic, but left unattended, it can hinder brewer performance. De-scaling your brewer helps maintain the heating element, and other internal parts of the brewer that come in contact with water.</p>
+                <img src="KFig15.jpg" alt="Fig. 10" style="margin-right:7%; float:left;">
+                <p>The brewer should be de-scaled every 3-6 months to ensure optimal performance. It is possible for calcium deposits to build up faster, making it necessary to de-scale more often.</p>
+                <p style="margin-top:10%;">You should promptly de-scale if the red Descale Light is illuminated (fig. 10). However, even if the red Descale Light is not illuminated you should continue to de-scale your brewer every 3-6 months.</p>
+<!-- 03AUG19: START HERE UNDER'DE-SCALING INSTRUCTIONS' -->  
+                <h3>De-Scaling Instructions <hr class="subTopic-hr"></h3>
+                <ol style="list-style: upper-alpha;">
+                    <li><strong>PREPARE</strong>
+                        <ol>
+                            <li>  To begin, you will need the following: At least 48 oz. of undiluted white vinegar  Access to an empty sink A large ceramic mug (do not use a paper cup) </li>
+                            <li>Empty the water from the Water Reservoir. <strong>NOTE: If you are using a water filter inside the Water Reservoir, remove it before proceeding.</strong></li>
+                        </ol>
+                    </li>
+
+                    <li><strong>FILL AND CLEAN</strong>
+                        <ol>
+                            <li>Pour approximately 48 oz. of the vinegar into the Water Reservoir.  Fill to and not beyond the MAX FILL line</li>
+                            <li>  Place a large mug on the Drip Tray Plate and run a cleansing brew. <strong>DO NOT USE A K-CUP® PACK</strong>, just press a Brew Button. Pour the contents of the large mug into the sink</li>
+                            <li>  Repeat the brew process without a K-Cup® pack until the blue Add Water Light illuminates.</li>
+                            <li>Now let the brewer stand for at least 4 hours while still on.</li>
+                            <li>Discard any residual vinegar and rinse the Water Reservoir thoroughly</li>
+                        </ol>
+                    </li>
+
+                    <li><strong>RINSE</strong>
+                        <ol>
+                            <li>Ensure the Water Reservoir is filled with fresh water. Fill to and not beyond the MAX FILL line</li>
+                            <li>Place a large mug on the Drip Tray Plate and run a cleansing brew. Pour the contents of the large mug into the sink.</li>
+                            <li>Step 3:  Repeat brew process until the blue Add Water Light is illuminated.</li>
+                            <li>You may need to perform additional cleansing brews if you notice any residual taste</li>
+                        </ol>
+                    </li>
+                </ol>
+                <div class="attentionBox">
+                    <code><strong>NOTE:</strong> If the red Descale Light is still illuminated after completing  the procedure, repeat the de-scaling procedure above.</code>
+                </div>
+                <h3>Service <hr class="subTopic-hr"></h3>
+                <p>Beyond these recommended cleaning and maintenance procedures, this brewer is not user serviceable. For service, please refer to the Warranty section of this guide.</p>
+                <h3 id="subTopic6">Storage</h3>
+                <p>Empty the Water Reservoir before storing and take care to ensure that you store your brewer in a safe and frost free environment. Please be sure to store your brewer in its upright position to avoid water leakage from the inner tank. If you store the brewer in a cold environment, you run the risk of water freezing inside the brewer and causing damage. When you prepare to use it after storage, we recommend rinsing the Water Reservoir with fresh water and running three cleansing brews without a K-Cup® pack.</p>
+                <p>If you plan to move your brewer to a different location, turn the brewer off, unplug it and empty the Water Reservoir. If your brewer has been in  an environment below freezing, please be sure to let it warm to room temperature for at least 2 hours before using.</p>
+            </section>
+
+<hr>
+            <section id="Topic5">
+                <h2>Troubleshooting</h2>
+                <!-- 04AUG19: MAKE 2 COLUMN TABLE WITH 'SITUATIONS' AND 'SOLUTION' HEADERS -->
+                <table>
+                    <tr>
+                        <th style="border-bottom:solid 1px;">Situation</th>
+                        <th style="border-bottom:solid 1px;">Solution</th>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom:solid 1px;"><strong>Brewer does not have power</strong></td>
+                        <td style="border-bottom:solid 1px;">
+                            <ul class="ulTable">
+                                <li>Plug brewer into an independent outlet. </li>
+                                <li>Check to be sure that it is plugged in securely.</li>
+                                <li>Plug into a different outlet.  </li>
+                                <li>Reset your home’s circuit breaker, if necessary.</li>
+                                <li>Make sure that the Power Button has been turned on and the green Power Light is illuminated.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom:solid 1px;"><strong>Brewer will not brew</strong></td>
+                        <td style="border-bottom:solid 1px;">
+                            <ul class="ulTable">
+                                <li> After placing the K-Cup® pack in the K-Cup® Pack Holder, make sure that the Handle is pushed down securely and the blue Brew Buttons are flashing.</li>
+                                <li>If the blue Add Water Light is illuminated, add water to Water Reservoir. Fill to and not beyond the MAX FILL line. Make sure the Water Reservoir is seated properly in its base.</li>
+                                <li>If the blue Add Water Light continues to be illuminated even after refilling, contact Customer Service at 1.866.901.BREW (2739).</li>
+                                <li>If the blue Add Water Light, red Heating Light and Small Mug Button are all flashing simultaneously, see next situation.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom:solid 1px;"><strong>Blue Add Water Light, red Heating Light and Small Mug Button are all flashing simultaneously</strong></td>
+                        <td style="border-bottom:solid 1px;">
+                            <ul class="ulTable">
+                                <li>Completely remove the Water Reservoir and  thoroughly clean (refer to page 11). Ensure the  Water Reservoir is filled to and not beyond the MAX FILL line. Return it to the brewer and ensure it is seated properly, then press the flashing Small  Mug Button.</li>
+                                <li>If you have completed the above procedure two times and the situation persists, contact Customer Service  at 1.866.901.BREW (2739).</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="border-bottom:solid 1px;"><strong>Brewing a 
+                            partial cup</strong></td>
+                        <td style="border-bottom:solid 1px;">
+                            <ul class="ulTable">
+                                <li>The Exit Needle may be clogged.</li>
+                                <li>Clean K-Cup® Pack Holder if necessary and rinse under faucet.</li>
+                                <li>The Water Reservoir may have been removed during brewing. Replace the Water Reservoir and perform a cleansing brew without a K-Cup® pack.</li>
+                                <li> If the red Descale Light is illuminated, de-scale the brewer.</li>
+                                <li> If you have repeated the de-scale procedure on  your brewer two times and it is still only brewing  a partial cup, contact Customer Service at  1.866.901.BREW (2739).</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom:solid 1px;"><strong>Brewer shuts off automatically</strong></td>
+                        <td style="border-bottom:solid 1px;">
+                            <ul class="ulTable">
+                                <li>Check to make sure that the Auto Off Timer feature has not been enabled. If the green Auto Off Light is illuminated, press the black Auto Off Button to disable the Auto Off Timer feature.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom:solid 1px;"><strong>Water appears in the Brewer base with the Water 
+                            Reservoir removed</strong></td>
+                        <td style="border-bottom:solid 1px;">
+                            <ul class="ulTable">
+                                <li>It is normal for a small amount of water (less than  10 ml) to collect if the Water Reservoir is not seated  for a period of time. This will not affect the operation  of the brewer.</li>
+                                <li>Use clean cloth or paper towel to absorb the water. </li>
+                                <li> Return the Water Reservoir back to the brewer base.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <p style="text-align:center;"><strong>If any problems persist, contact Customer Service at 1.866.901.BREW (2739)</strong></p>
+            </section>
+
+        </main>
+ </body>
+ </html>
