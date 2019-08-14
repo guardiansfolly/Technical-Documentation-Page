@@ -1,4 +1,4 @@
-/* FINISHED WITH MOBILE VERSION AS OF 04AUG19 1126. NEED TO MAKE RESPONSIVE FOR LARGER SCREEN SIZES USING MEDIA QUERIES */
+
 html{
     font-family: 'Raleway', sans-serif;
     scroll-behavior: smooth;
@@ -10,7 +10,12 @@ body{
     display:grid;
     grid-template-areas:
     "nav"
-    "body"; 
+    "body";
+}
+
+img{
+    margin-right:7%; 
+    float:left;
 }
 li{
     line-height: 1.5em;
@@ -19,6 +24,7 @@ li{
     display:grid;
     text-align:center;
     text-decoration: none;
+    grid-template-columns: 90% 10%;
     grid-template-areas: 
     "title title"
     "main1 subM1"
@@ -30,8 +36,8 @@ li{
     "main5 main5";
     height: 8em;
     overflow-y: scroll;
-    /* border: solid; */
 }
+
 .navigation-grid > a{
     padding:1.5%;
     border: solid 1px #450a45;
@@ -43,7 +49,6 @@ li{
 }
 .mainTopic1{
     grid-area: main1;
-    /* border-top:solid 1.5px grey; */
 }
 .sub-btn1{
     grid-area: subM1;
@@ -70,7 +75,6 @@ li{
 }
 .mainTopic5{
     grid-area: main5;
-    /* border-bottom: 1.5px solid grey; */
 }
 button{
     cursor: pointer;
@@ -101,19 +105,18 @@ hr{
     border-top: 1px solid #450a45;
     border-bottom: 1px solid #450a45;
     margin:0;
+    border-right: 1.5px solid #450a45;
+    border-left: 1.5px solid #450a45;
 }
 #navbar li{
     padding:1%;
     border-top: 0.5px solid #450a45;
     border-bottom: 0.5px solid #450a45;
     text-align: right;
-    border-right: 1.5px solid #450a45;
 }
 #navbar a{
     text-decoration: none;
     color:black;
-    /* padding:2%; */
-
 }
 .sub-menu{
     display:none;
@@ -127,146 +130,60 @@ hr{
     padding: 1em;
 }
 .imgContainer{
-    width:100%;
-    margin:auto;
+    display:grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-items: center;
 }
 .imgContainer img{
-    width:9em;
+    width:28em;
+    margin:1%;
 }
 .ulTable{
     border-left:solid 1px;
 }
-/* body{
-    display:grid;
-    grid-template-areas:
-    "nav body";
-    grid-template-columns: 16% 84%;
-    margin:0;
-    grid-column-gap: 5%;
-} */
-/* button{
-    cursor: pointer;
-}
-a{
-    cursor: pointer;
-}
-.navigation-grid{
-    display:grid;
-    grid-template-areas:
-    "main1 subM1"
-    "smen1 smen1"
-    "main2 main2"
-    "main3 main3"
-    "main4 subM4"
-    "smen4 smen4"
-    "main5 main5";
-    grid-template-columns: 75% 25%;
-}
-i{
-    font-size:2em;
-}
-.mainTopic1,.mainTopic2,.mainTopic3,.mainTopic4,.mainTopic5{
-    padding:5%;
-    border-top:solid 0.5px grey;
-    border-bottom: solid 0.5px grey;
-    border-right: solid 1.5px grey;
+@media(min-width:376px){
+    .navigation-grid{
+        grid-template-columns: 90% 10%;
+    }
 }
 
-.mainTopic1{
-    grid-area: main1;
-    border-top:solid 1.5px grey;
+@media(min-width:768px){
+    body{
+        display:grid;
+        grid-template-areas:
+        "nav body";
+        grid-template-columns: 20% 70%;
+        grid-column-gap:1%;
+        
+    }
+    .navigation-grid{
+        display:grid;
+        grid-template-areas:
+        "title tiele"
+        "main1 subM1"
+        "smen1 smen1"
+        "main2 main2"
+        "main3 main3"
+        "main4 subM4"
+        "smen4 smen4"
+        "main5 main5";
+       overflow-y:initial;
+       height:auto;
+       font-size:x-small;
+    }
+ 
+    #navbar li{
+        font-size:initial;
+    }
+    #navbar a{
+        text-align:left;
+    }
+    #navbar{
+        position: fixed;
+        width:20%;
+    }
+    #main-doc{
+        grid-area:body;
+    }
 }
-.sub-btn1{
-    grid-area: subM1;
-}
-.smen1{
-    grid-area:smen1;
-}
-.mainTopic2{
-    grid-area: main2;
-}
-.sub-btn2{
-    grid-area: subM2;
-}
-.smen2{
-    grid-area: smen2;
-}
-.mainTopic3{
-    grid-area: main3;
-}
-.sub-btn3{
-    grid-area: subM3;
-}
-.smen3{
-    grid-area:smen3;
-}
-.mainTopic4{
-    grid-area: main4;
-}
-.sub-btn4{
-    grid-area: subM4;
-}
-.smen4{
-    grid-area:smen4;
-}
-.mainTopic5{
-    grid-area: main5;
-    border-bottom: 1.5px solid grey;
-}
-.sub-btn5{
-    grid-area: subM5;
-}
-.smen5{
-    grid-area:smen5;
-} */
-
-/* #navbar{
-    grid-area: nav;
-    border: solid grey 2px;
-    text-align:center;
-    text-decoration:none; */
-
-    /* position:fixed allows for a fixed nav sidebar */
-
-    /* position:fixed;
-    width:15%;
-    height:100%;
-    overflow-y: scroll;
-    z-index:2;
-    overflow-x: unset;
-    word-wrap: break-word; 
-} */
-
-/* #navbar ul{
-    list-style:none;
-    padding:0;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
-    margin:0;
-}
-#navbar li{
-    padding:5%;
-    border-top: 0.5px solid grey;
-    border-bottom: 0.5px solid grey;
-    text-align: right;
-    border-right: 1.5px solid grey;
-}
-#navbar div{
-    padding:5%;
-    border-top: 0.5px solid grey;
-    border-bottom: 0.5px solid grey;
-}
-
-#navbar a{
-    text-decoration: none;
-    color:black;
-    padding:2%;
-
-}
-.sub-menu{
-    display:none;
-}
-#main-doc{
-    grid-area: body;
-    width:85%;
-} */
